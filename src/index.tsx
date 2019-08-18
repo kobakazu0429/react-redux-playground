@@ -2,13 +2,17 @@ import "normalize.css";
 
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 
-import App from "./App";
+import Counter from "./containers/counter";
+import { store } from "./stores";
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <Counter />
+    </BrowserRouter>
+  </Provider>,
   document.getElementById("root")
 );
