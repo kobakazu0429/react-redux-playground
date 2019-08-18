@@ -11,7 +11,12 @@ import { store } from "./stores";
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <Counter />
+      <>
+        <Counter />
+        <a href="https://github.com/kobakazu0429/react-redux-playground">
+          Code is here.
+        </a>
+      </>
     </BrowserRouter>
   </Provider>,
   document.getElementById("root")
